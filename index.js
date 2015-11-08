@@ -12,19 +12,34 @@ module.exports = {
       name: options.name,
       requiredConfig: ['authToken', 'room', 'roomNotifyToken'],
       defaultConfig: {
-        didDeploy: function() {
+        didDeploy: function(context) {
           return function(hipchat) {
+            var message = "Deployment of " + this._getRevisionMessage(context) + " finished.";
+
             return hipchat.notify(
-              "Deployment finished! New revision was successfully uploaded.",
+              message,
               'green'
             );
           };
         },
 
-        didFail: function() {
+        didActivate: function(context) {
+          return function(hipchat) {
+            var message = "Activation of " + this._getRevisionMessage(context) + " finished.";
+
+            return hipchat.notify(
+              message,
+              'green'
+            );
+          };
+        },
+
+        didFail: function(context) {
+          var message = "Deployment of " + this._getRevisionMessage(context) + " failed.";
+
           return function(hipchat) {
             return hipchat.notify(
-              "Deployment failed.",
+              message,
               'red'
             );
           };
@@ -100,6 +115,20 @@ module.exports = {
           room:            room,
           roomNotifyToken: roomNotifyToken,
         });
+      },
+      _getRevisionMessage: function(context) {
+        var revision;
+        if (context.revisionData) {
+          revision = context.revisionData['revisionKey'] || context.revisionData['activatedRevisionKey'];
+        }
+
+        var projectName = context.project.name();
+
+        if (revision) {
+          return projectName + ' revision ' + revision;
+        } else {
+          return projectName;
+        }
       }
     });
     return new DeployPlugin();
