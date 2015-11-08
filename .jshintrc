@@ -2,7 +2,11 @@
   "predef": [
     "document",
     "window",
-    "-Promise"
+    "-Promise",
+    "describe",
+    "beforeEach",
+    "afterEach",
+    "it"
   ],
   "browser": true,
   "boss": true,
