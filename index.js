@@ -14,7 +14,7 @@ module.exports = {
       defaultConfig: {
         didDeploy: function(context) {
           return function(hipchat) {
-            var message = "Deployment of " + this._getRevisionMessage(context) + " finished.";
+            var message = "Deployment of " + this._getHumanDeployMessage(context) + " finished.";
 
             return hipchat.notify(
               message,
@@ -25,7 +25,7 @@ module.exports = {
 
         didActivate: function(context) {
           return function(hipchat) {
-            var message = "Activation of " + this._getRevisionMessage(context) + " finished.";
+            var message = "Activation of " + this._getHumanDeployMessage(context) + " finished.";
 
             return hipchat.notify(
               message,
@@ -35,7 +35,7 @@ module.exports = {
         },
 
         didFail: function(context) {
-          var message = "Deployment of " + this._getRevisionMessage(context) + " failed.";
+          var message = "Deployment of " + this._getHumanDeployMessage(context) + " failed.";
 
           return function(hipchat) {
             return hipchat.notify(
@@ -116,7 +116,7 @@ module.exports = {
           roomNotifyToken: roomNotifyToken,
         });
       },
-      _getRevisionMessage: function(context) {
+      _getHumanDeployMessage: function(context) {
         var revision;
         if (context.revisionData) {
           revision = context.revisionData['revisionKey'] || context.revisionData['activatedRevisionKey'];
@@ -124,11 +124,14 @@ module.exports = {
 
         var projectName = context.project.name();
 
+        var message;
         if (revision) {
-          return projectName + ' revision ' + revision;
+          message = projectName + ' revision ' + revision;
         } else {
-          return projectName;
+          message = projectName;
         }
+
+        return message + " to " + context.deployTarget + " target";
       }
     });
     return new DeployPlugin();
