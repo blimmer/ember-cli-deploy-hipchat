@@ -2,6 +2,10 @@
 
 This README outlines the details of collaborating on this Ember addon.
 
+## Setup
+1. Generate API access token
+2. Generate Room access token
+
 ## Installation
 
 * `git clone` this repository
