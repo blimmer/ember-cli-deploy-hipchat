@@ -1,9 +1,8 @@
 {
   "name": "ember-cli-deploy-hipchat",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.1.0",
+  "description": "An ember-cli-deploy-plugin for sending messages to HipChat",
   "directories": {
-    "doc": "doc",
     "test": "tests"
   },
   "scripts": {
@@ -12,11 +11,14 @@
     "test": "node node_modules/mocha/bin/mocha  node-tests/**/*-test.js",
     "autotest": "node node_modules/mocha/bin/mocha --watch --reporter spec node-tests/**/*-test.js"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blimmer/ember-cli-deploy-hipchat.git"
+  },
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Ben Limmer <ben@benlimmer.com> (http://benlimmer.com/)",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.1.2",
@@ -54,5 +56,9 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/blimmer/ember-cli-deploy-hipchat/issues"
+  },
+  "homepage": "https://github.com/blimmer/ember-cli-deploy-hipchat#readme"
 }
