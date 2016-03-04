@@ -70,6 +70,7 @@ For detailed information on what plugin hooks are and how they work, please refe
 - `willActivate`
 - `activate`
 - `didActivate`
+- `fetchRevisions`
 - `didDeploy`
 - `didFail`
 
@@ -121,6 +122,20 @@ ENV.hipchat = {
 
 Notification hooks will be passed the deployment context and the hipchatNotifier
 utility class. The HipchatNotifier uses [hipchatter](https://github.com/charltoons/hipchatter) under the hood so you can use its `notify`-function accordingly.
+
+If you would like to send options beyond message and color (`message_type`, for example), you can pass options:
+
+```js
+didDeploy: function(context) {
+  return function(hipchat) {
+  	return hipchat.notify({
+  	  message: 'what is up @all',
+  	  color: 'purple',
+  	  message_type: 'text'
+  	});
+  }
+}
+```
 
 Because of the way `ember-cli-deploy` merges return values of hooks back into the deployment context, you can easily add custom properties to the deployment context if that's what you need to do:
 
