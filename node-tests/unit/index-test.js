@@ -47,6 +47,7 @@ describe('index', function() {
     expect(plugin.activate).to.be.a.function;
     expect(plugin.didActivate).to.be.a.function;
     expect(plugin.fetchRevisions).to.be.a.function;
+    expect(plugin.displayRevisions).to.be.a.function;
     expect(plugin.didDeploy).to.be.a.function;
     expect(plugin.didFail).to.be.a.function;
   });

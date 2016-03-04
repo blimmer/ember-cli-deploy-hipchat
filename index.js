@@ -90,6 +90,10 @@ module.exports = {
         return this._executeHipchatNotificationHook('fetchRevisions');
       },
 
+      displayRevisions: function( /* context */ ) {
+        return this._executeHipchatNotificationHook('displayRevisions');
+      },
+
       didDeploy: function( /* context */ ) {
         return this._executeHipchatNotificationHook('didDeploy');
       },
