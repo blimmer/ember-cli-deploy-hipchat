@@ -60,6 +60,29 @@ describe('HipChat Notifier', function() {
       })).to.be.ok;
     });
 
+    it('sends correct params with added options provided', function() {
+      var message = "a message";
+      var color   = "green";
+      var room    = "7539";
+      var token   = "ds90ab09d8sa09d983kljsaf";
+      var format  = "text";
+
+      hipchat.notify({
+        message:        message,
+        color:          color,
+        room:           room,
+        token:          token,
+        message_format: format
+      });
+
+      expect(hipchatNotify.calledWith(room, {
+        message:        message,
+        color:          color,
+        token:          token,
+        message_format: format
+      })).to.be.ok;
+    });
+
     it('returns a promise', function() {
       var messages = {
           text: "I can haz promises instead of callbacks"
