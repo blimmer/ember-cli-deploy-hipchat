@@ -86,10 +86,6 @@ module.exports = {
         return this._executeHipchatNotificationHook('didActivate');
       },
 
-      fetchRevisions: function( /* context */ ) {
-        return this._executeHipchatNotificationHook('fetchRevisions');
-      },
-
       displayRevisions: function( /* context */ ) {
         return this._executeHipchatNotificationHook('displayRevisions');
       },
