@@ -70,7 +70,7 @@ For detailed information on what plugin hooks are and how they work, please refe
 - `willActivate`
 - `activate`
 - `didActivate`
-- `fetchRevisions`
+- `displayRevisions`
 - `didDeploy`
 - `didFail`
 
