@@ -1,7 +1,14 @@
 # Change Log
 
-## [0.1.1](https://github.com/blimmer/ember-cli-deploy-hipchat/tree/0.1.1) (2016-03-04)
-[Full Changelog](https://github.com/blimmer/ember-cli-deploy-hipchat/compare/v0.1.0...0.1.1)
+## [0.2.0](https://github.com/blimmer/ember-cli-deploy-hipchat/tree/0.2.0) (2016-03-04)
+[Full Changelog](https://github.com/blimmer/ember-cli-deploy-hipchat/compare/v0.1.1...0.2.0)
+
+**Merged pull requests:**
+
+- also display revisions :-\ [\#5](https://github.com/blimmer/ember-cli-deploy-hipchat/pull/5) ([spencer516](https://github.com/spencer516))
+
+## [v0.1.1](https://github.com/blimmer/ember-cli-deploy-hipchat/tree/v0.1.1) (2016-03-04)
+[Full Changelog](https://github.com/blimmer/ember-cli-deploy-hipchat/compare/v0.1.0...v0.1.1)
 
 **Merged pull requests:**
 
