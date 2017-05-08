@@ -53,7 +53,8 @@
     "ember-cli-deploy-plugin": "^0.2.0",
     "hipchatter": "^0.2.0",
     "lodash": "^4.6.1",
-    "qs": "^5.2.0"
+    "qs": "^5.2.0",
+    "rsvp": "^3.3.3"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"

@@ -2,7 +2,7 @@
 
 var expect          = require('chai').expect;
 var sinon           = require('sinon');
-var Promise         = require('ember-cli/lib/ext/promise');
+var RSVP            = require('rsvp');
 
 // tokens generated with faker
 var AUTH_TOKEN        = 'UBIlRy9Jc2H1igE';
@@ -58,7 +58,7 @@ describe('index', function() {
         name: 'hipchat'
       });
 
-      notifyStub = sandbox.stub().returns(Promise.resolve());
+      notifyStub = sandbox.stub().returns(RSVP.resolve());
 
       context = {
         deployTarget: 'production',
