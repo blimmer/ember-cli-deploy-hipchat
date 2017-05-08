@@ -35,9 +35,9 @@ module.exports = {
         },
 
         didFail: function(context) {
-          var message = "Deployment of " + this._getHumanDeployMessage(context) + " failed.";
-
           return function(hipchat) {
+            var message = "Deployment of " + this._getHumanDeployMessage(context) + " failed.";
+
             return hipchat.notify(
               message,
               'red'
