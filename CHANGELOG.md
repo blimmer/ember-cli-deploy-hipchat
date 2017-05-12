@@ -1,7 +1,19 @@
 # Change Log
 
-## [0.2.0](https://github.com/blimmer/ember-cli-deploy-hipchat/tree/0.2.0) (2016-03-04)
-[Full Changelog](https://github.com/blimmer/ember-cli-deploy-hipchat/compare/v0.1.1...0.2.0)
+## [0.3.0](https://github.com/blimmer/ember-cli-deploy-hipchat/tree/0.3.0) (2017-05-11)
+[Full Changelog](https://github.com/blimmer/ember-cli-deploy-hipchat/compare/v0.2.0...0.3.0)
+
+**Closed issues:**
+
+- Consider merging project with ember-cli-deploy-notifications [\#3](https://github.com/blimmer/ember-cli-deploy-hipchat/issues/3)
+
+**Merged pull requests:**
+
+- Ember CLI and Runtime Dependency Upgrades [\#8](https://github.com/blimmer/ember-cli-deploy-hipchat/pull/8) ([blimmer](https://github.com/blimmer))
+- Replace `ember-cli/ext/promise` with `rsvp` [\#7](https://github.com/blimmer/ember-cli-deploy-hipchat/pull/7) ([oscarni](https://github.com/oscarni))
+
+## [v0.2.0](https://github.com/blimmer/ember-cli-deploy-hipchat/tree/v0.2.0) (2016-03-05)
+[Full Changelog](https://github.com/blimmer/ember-cli-deploy-hipchat/compare/v0.1.1...v0.2.0)
 
 **Merged pull requests:**
 
