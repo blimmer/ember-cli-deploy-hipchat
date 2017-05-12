@@ -6,15 +6,16 @@ node_js:
 sudo: false
 
 cache:
+  yarn: true
   directories:
-    - $HOME/.npm
+    - node_modules
 
 before_install:
   - npm config set spin false
   - phantomjs --version
 
 install:
-  - npm install
+  - yarn install
 
 script:
-  - npm test
+  - yarn test
